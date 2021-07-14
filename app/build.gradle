@@ -26,6 +26,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    //noinspection GroovyAssignabilityCheck
+    buildFeatures {
+        //noinspection GroovyAssignabilityCheck
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -35,7 +41,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
-    // Google sign in
+
+    // Google Sign-in
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
     testImplementation 'junit:junit:4.+'
