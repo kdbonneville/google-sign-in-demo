@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
   public boolean onOptionsItemSelected(MenuItem item) {
 
     boolean handled = true;
+
     switch (item.getItemId()) {
       case R.id.sign_out:
         logout();
