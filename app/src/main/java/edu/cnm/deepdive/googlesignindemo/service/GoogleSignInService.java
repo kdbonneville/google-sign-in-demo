@@ -60,19 +60,18 @@ public class GoogleSignInService {
       setAccount(task.getResult(ApiException.class));
     } catch (ApiException e) {
       // Exception will be passed automatically to onFailureListener.
-          }
+    }
     return task;
   }
 
   public Task<Void> signOut() {
     return client.signOut()
-        .addOnCompleteListener((ignored)-> setAccount(null));
+        .addOnCompleteListener((ignored) -> setAccount(null));
   }
-
 
   private void setAccount(GoogleSignInAccount account) {
     this.account = account;
-    if(account !=null) {
+    if(account != null) {
       Log.d(getClass().getSimpleName(), account.getIdToken());
     }
   }
@@ -82,5 +81,6 @@ public class GoogleSignInService {
     private static final GoogleSignInService INSTANCE = new GoogleSignInService();
 
   }
+
 
 }
